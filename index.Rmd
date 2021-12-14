@@ -1,0 +1,217 @@
+---
+title: "Análisis de las mejores 100 universidades del mundo"
+author: Anna Chesa Llorens, Lorenzo Chirchirillo, Alicja Młynek 
+date: "Diciembre de 2021 (actualizado el `r format(Sys.time(), '%d-%m-%Y')`)"
+output: 
+    ioslides_presentation:
+      smaller: true
+      fig_width: 7
+      fig_height: 6
+      fig_caption: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Análisis de las mejores 100 universidades del mundo 
+
+-   Objetivo del trabajo: Visualizar los datos provinientes de tres ránkings diferentes para ver cuáles han sido las mejores universidades del mundo durante el período 2012-2015.
+
+```{r, echo = FALSE, eval = TRUE, out.width = "76%", fig.align = "center"}
+knitr::include_graphics(here::here("imagenes", "harvard.jpeg") ) 
+```
+
+# Datos
+
+## ¿Qué ránkings vamos a analizar? 
+
+-   Vamos a intentar mostrar todos los datos de la manera más visual posible, a través de gráficos y tablas.
+
+-   Nuestros ránkings de referencia serán:
+
+    -   [Center for World University Rankings](https://cwur.org/), que desde su fundación en *2012* recopila los datos de las mejores universidades desde **Arabia Saudita**. Es en el que más nos vamos a centrar debido a la calidad de sus datos.
+
+    -   [Times Higher Education World University Ranking](https://www.timeshighereducation.com/content/world-university-rankings), fundado en **Reino Unido** en *2010*, es una de las clasificaciones más influyentes del momento, aunque algo criticado por su especial fijación en las universidades inglesas.
+
+    -   [Academic Ranking of World Universities](http://www.shanghairanking.com/), más conocido como el tan influyente **Shangai Ranking**, que comenzó a publicar sus listados en *2003*.
+
+# Preguntas de investigación
+
+# CENTER FOR WORLD UNIVERSITY RANKINGS 
+
+##
+
+-   Para empezar, hemos querido saber **qué país tiene más instituciones en el ránking** para cada año por separado. Lo hemos analizado teniendo en cuenta tanto el top 50 como el top 100.
+
+-   Aquí vemos un ejemplo de una de las tablas, en este caso en referencia al año 2012 y teniendo en cuenta el top 100.
+
+```{r, echo = FALSE, eval = TRUE, out.width = "76%", fig.align = "center"}
+knitr::include_graphics(here::here("imagenes", "cwur2012-top100.png") ) 
+```
+
+## EE.UU como claro ganador 
+
+-   En todos los análisis que hemos hecho, **EEUU** se posiciona como el país con más universidades en el ránking CWUR durante todos los años, seguido de países como **Alemania**, **Japón** o **Francia**.
+
+```{r, echo = FALSE, eval = TRUE, out.width = "76%", fig.align = "center"}
+knitr::include_graphics(here::here("imagenes", "paises_cwur.png") ) 
+```
+
+## Vistos también estos paises en el mapa 
+
+```{r, echo = FALSE, eval = TRUE, out.width = "76%", fig.align = "center"}
+knitr::include_graphics(here::here("imagenes", "mapa_cwur.png") ) 
+```
+
+## Comparación con otro ránking 
+
+-   Podemos ver la **diferencia de países** comparando los datos de ***CWUR*** con los de ***Times***, y este es el resultado
+
+-   **CENTER FOR WORLD UNIVERSITY RANKINGS**:
+
+```{r, echo = FALSE, eval = TRUE, out.width = "76%", fig.align = "center"}
+knitr::include_graphics(here::here("imagenes", "cwur_countries.png") ) 
+```
+
+##  
+
+-   **TIMES HIGHER EDUCATION WORLD UNIVERSITY RANKING**:
+
+```{r, echo = FALSE, eval = TRUE, out.width = "76%", fig.align = "center"}
+knitr::include_graphics(here::here("imagenes", "times_countries.png") ) 
+```
+
+## Mejores universidades 
+
+-   Después de analizar los países, queremos saber entonces **cuáles han sido las mejores universidades** según CWUR.
+
+-   Claramente **Harvard** es la ganadora durante todos los años, y los siguientes cinco puestos cambian siempre entre las mismas instituciones (*MIT, Stanford, Cambridge, Oxford...*)
+
+```{r, echo = FALSE, eval = TRUE, out.width = "76%", fig.align = "center"}
+knitr::include_graphics(here::here("imagenes", "tabla_unis.png") ) 
+```
+
+## Massachusetts Institute of Technology 
+
+```{r, echo = FALSE, eval = TRUE, out.width = "76%", fig.align = "center"}
+knitr::include_graphics(here::here("imagenes", "MIT.jpeg") ) 
+```
+
+## Universidad de Stanford 
+
+```{r, echo = FALSE, eval = TRUE, out.width = "76%", fig.align = "center"}
+knitr::include_graphics(here::here("imagenes", "stanford.jpeg") ) 
+```
+
+## Relación entre el ránking y otras variables 
+
+-   Estas unis son las mejores pero, *¿se ve eso **reflejado** en otras variables?*
+
+-   SÍ! En uno de los gráficos incluidos para cada año, vemos cómo el posicionamiento respecto a las **patentes**, **empleabilidad** de alumnos o el número de **citas** tiene que ver con el posicionamiento en el ránking global.
+
+##  
+
+```{r, echo = FALSE, eval = TRUE, out.width = "76%", fig.align = "center"}
+knitr::include_graphics(here::here("imagenes", "spider_cwur.png") ) 
+```
+
+## 
+
+-   Además, centrandonos en la **calidad de la educación** y **posterior empleabilidad**, observamos como las universidades se clasifican mejor en calidad de la eduación que en empleabilidad.
+
+```{r, echo = FALSE, eval = TRUE, out.width = "76%", fig.align = "center"}
+knitr::include_graphics(here::here("imagenes", "quality_edu.png") ) 
+```
+
+## 
+
+```{r, echo = FALSE, eval = TRUE, out.width = "76%", fig.align = "center"}
+knitr::include_graphics(here::here("imagenes", "alumni_employment.png") ) 
+```
+
+# TIMES HIGHER EDUCATION WORLD UNIVERSITY RANKING 
+
+##  
+
+-   Nos centramos ahora en otro dataset y vamos a hacernos diferentes preguntas.
+-   Primero, *¿cuáles han sido las **cinco mejores universidades según Times**?*
+
+```{r, echo = FALSE, eval = TRUE, out.width = "76%", fig.align = "center"}
+knitr::include_graphics(here::here("imagenes", "ranking_times.png") ) 
+```
+
+## 
+
+*¿Cuál es el **número de estudiantes matriculados** en las 20 mejores universidades a lo largo del tiempo?* En realidad es un gráfico dinámico, pero aquí mostramos los datos para 2014.
+
+```{r, echo = FALSE, eval = TRUE, out.width = "76%", fig.align = "center"}
+knitr::include_graphics(here::here("imagenes", "alumni_times.png") ) 
+```
+
+## 
+
+La relación entre las **mejores universidades** y el **porcentaje** de **estudiantes extranjeros**:
+
+```{r, echo = FALSE, eval = TRUE, out.width = "76%", fig.align = "center"}
+knitr::include_graphics(here::here("imagenes", "intern.png") ) 
+```
+
+# ACADEMIC RANKING OF WORKD UNIVERSITIES 
+
+##  
+
+*¿Cuáles han sido las **cinco mejores universidades** según el ránking de Shanghai?*
+
+```{r, echo = FALSE, eval = TRUE, out.width = "76%", fig.align = "center"}
+knitr::include_graphics(here::here("imagenes", "ranking_shanghai.png") ) 
+```
+
+## Alumni y Profesores ganadores de premios Nobel y medallas Fields
+```{r, echo = FALSE, eval = TRUE, out.width = "76%", fig.align = "center"}
+knitr::include_graphics(here::here("imagenes", "alumni_nobel.png") )
+```
+
+##
+```{r, echo = FALSE, eval = TRUE, out.width = "76%", fig.align = "center"}
+knitr::include_graphics(here::here("imagenes", "staff_nobel.png") )
+```
+
+# Conclusiones
+
+##  
+
+> -   Hemos analizado los datos mediante gráficos y tablas y hemos visto como cada ránking ofrece **información diversa**.
+
+> -   **EEUU** es el país con las **mejores universidades** en todo el mundo.
+
+> -   Un buen posicionamiento en el ránking mundial tiene relación con una elevada posición respecto a otras variables (*citas, publicaciones, empleabilidad...*)
+
+> -   Las mejores universidades suelen **mantener su estatus** y hay escasos cambios significativos en el ránking.
+
+> -   Observamos diferentes clasificaciones dependiendo de la institución que elabora el ránking.
+
+# Bibliografía 
+
+##  
+
+Nos hemos basado en diferentes fuentes y trabajos ya existentes, como:
+
+> -   World University Rankings Advanced Analysis
+
+> -   Análisis sobre la Covid-19
+
+> -   Página web de Kaggle
+
+> -   Galería de gráficos de ggplot
+
+> -   La página web del curso
+
+> -   What impact does university reputation have on students?
+
+> -   Univesidades líderes en el mundo. El posicionamiento de España. 2020
+
+> -   Y. Bano, S. Vasantha. Influence Of University Reputation On Employability. 2019
+
+
+
